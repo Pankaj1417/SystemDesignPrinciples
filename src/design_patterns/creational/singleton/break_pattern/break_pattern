@@ -1,0 +1,4 @@
+There are multiple ways to break a singleton patter:
+1. reflection Api :
+    Get the constructor, change its access from private to public , call the constructor
+    Solution : Throw run time exception in the constructor and do not allow the initialization if object is not null
