@@ -1,7 +1,5 @@
 package systemDesign.CreationalPatterns.FactoryPattern.Product;
 
-import com.sun.xml.internal.stream.StaxErrorReporter;
-
 public class Car implements Vehicle{
 
     @Override

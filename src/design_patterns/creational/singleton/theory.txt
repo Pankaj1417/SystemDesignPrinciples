@@ -1,0 +1,10 @@
+Types of Singleton pattern creation : lazy and Eager
+In lazy way , we initialize in a public method that will be used to get the instance
+In Eager way , we initialize the static variable at class level and simply return the object during run time.
+
+Problems :
+Eager way is not good in an environment where we are dealing with so many singleton object and in case the object is not used then
+object creation is a waste.
+
+Lazy  way doesnot works good when thread safety is a concern.
+We need to use synchronised block/method in this case to make it thread safe.
