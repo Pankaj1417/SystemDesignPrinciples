@@ -1,4 +1,8 @@
 There are multiple ways to break a singleton patter:
 1. reflection Api :
     Get the constructor, change its access from private to public , call the constructor
-    Solution : Throw run time exception in the constructor and do not allow the initialization if object is not null
+    Solutions(Either return the same object or make sure object is not getting created)
+     1. Throw run time exception in the constructor and do not allow the initialization if object is not null
+     2. Use Enum in place of class and declare an instance
+2. Serialization/Deserialization
+3. Cloning
