@@ -1,5 +1,6 @@
-package design_patterns.creational.abstractFactory;
+package design_patterns.creational.abstractFactory.abstract_factory;
 
+import design_patterns.creational.abstractFactory.Application;
 import design_patterns.creational.abstractFactory.factory.GUIFactory;
 import design_patterns.creational.abstractFactory.factory.MacFactory;
 import design_patterns.creational.abstractFactory.factory.WindowsFactory;
