@@ -8,7 +8,5 @@ public class Main {
                 .setLastName("Kumar")
                 .build();
         System.out.println(user);
-        String name = user.getFirstName();
-
     }
 }
