@@ -1,0 +1,52 @@
+The Open/Closed Principle states that software entities (classes, modules, functions, etc.)
+should be open for extension but closed for modification. This means that the behavior of a module can be
+extended without modifying its source code. This principle is achieved through mechanisms like inheritance and composition.
+
+====Inheritance====================
+Inheritance allows a class (the subclass) to inherit properties and methods from another class (the superclass).
+This enables the subclass to extend the functionality of the superclass without modifying its code.
+
+In this example:
+The Payment class is an abstract class that defines a contract for processing payments.
+The CreditCardPayment and PayPalPayment classes extend Payment and provide their specific implementations.
+Here, if you need to add a new type of payment (e.g., BitcoinPayment), you can simply create a new subclass
+extending Payment, without modifying the existing classes. This is how inheritance supports the Open/Closed Principle.
+===================================
+
+
+
+======Composition==================
+Composition involves designing classes such that they are composed of other classes or interfaces,
+which provide the required functionality. This is often done by defining interfaces and injecting
+dependencies rather than relying on inheritance.
+
+In this example:
+The PaymentMethod interface defines a method process() for processing payments.
+The CreditCardPaymentMethod and PayPalPaymentMethod classes implement the PaymentMethod interface.
+The Payment class now depends on a PaymentMethod object, which is passed to it via the constructor (composition).
+Here, to add a new payment method, you just need to create a new class implementing PaymentMethod (e.g., BitcoinPaymentMethod) and pass an instance of it to the Payment class. This follows the Open/Closed Principle by allowing extensions through composition without altering existing code.
+======================================
+
+
+========================================
+Key Differences Between Inheritance and Composition
+1.Inheritance:
+Extends behavior through subclassing.
+Can lead to tight coupling if not used carefully.
+Changes in the superclass can affect all subclasses.
+2.Composition:
+Extends behavior by combining objects.
+Promotes loose coupling since classes depend on interfaces rather than specific implementations.
+Easier to change the behavior of a class by swapping out the composed objects.
+Both inheritance and composition can be used to achieve the Open/Closed Principle,
+but composition is often preferred in modern object-oriented design because it provides more flexibility
+and reduces the risk of tight coupling.
+==========================================
+
+
+Summary:
+
+By using composition, you reduce tight coupling by making classes depend on abstractions (interfaces) rather than specific implementations.
+This design allows for easier maintenance, testing, and extension of the system. Changes in one part of the system (like adding a
+new payment method) don't require modifications to existing classes, thus adhering to the Open/Closed Principle and leading to a
+more robust and scalable architecture.
