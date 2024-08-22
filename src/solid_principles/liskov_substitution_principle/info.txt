@@ -1,0 +1,17 @@
+The Liskov Substitution Principle (LSP) is one of the five SOLID principles of object-oriented design,
+which are fundamental to writing robust and maintainable software. LSP specifically addresses how objects
+of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
+
+Definition:
+The Liskov Substitution Principle states that:
+
+“Objects of a superclass should be replaceable with objects of a subclass without breaking the application.”
+
+In other words, if class S is a subclass of class T, then objects of type T in a program should be replaceable
+with objects of type S without altering the desirable properties of the program (e.g., correctness, task performed).
+
+Key Concepts:
+Behavioral Consistency: A subclass should override the superclass methods in a way that does not break the behavior
+expected from the superclass. The subclass should maintain the behavior that clients of the superclass expect.
+Contract Preservation: The subclass should adhere to the contract (methods and their expected behavior) defined by
+the superclass. This means respecting method signatures, expected outputs, and side effects.
